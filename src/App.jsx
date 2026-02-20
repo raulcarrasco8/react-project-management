@@ -1,10 +1,22 @@
+import { Route, Routes } from "react-router-dom"
+import NavBar from "./components/NavBar"
+import HomePage from "./pages/HomePage"
+import ProjectListPage from "./pages/ProjectListPage"
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>React project Management</h1>
+      <NavBar />
+
+      <Routes>
+        <Route path="/" element={ <HomePage />} />
+        <Route path="/projects" element={ <ProjectListPage />} />
+      </Routes>
+      
+
+      
     </>
   )
 }
