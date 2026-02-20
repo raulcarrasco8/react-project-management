@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import NavBar from "./components/NavBar"
 import HomePage from "./pages/HomePage"
-import ProjectListPage from "./pages/ProjectListPage"
+import PostListPage from "./pages/PostListPage"
 
 
 function App() {
@@ -12,11 +12,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={ <HomePage />} />
-        <Route path="/projects" element={ <ProjectListPage />} />
+        <Route path="/projects" element={ <PostListPage />} />
       </Routes>
-      
-
-      
     </>
   )
 }
