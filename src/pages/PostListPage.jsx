@@ -1,10 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
+import { BASE_URL } from "../config/api";
 
 
-
-const BASE_URL = 'https://jsonplaceholder.typicode.com'
 
 function PostListPage() {
 

@@ -2,7 +2,7 @@
 
 function NavBar() {
     return(
-        <h1>Welcom to Project Management App</h1>
+        <h1>Welcom to Post Management App</h1>
     )
 }
 
