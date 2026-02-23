@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom"
 import NavBar from "./components/NavBar"
 import HomePage from "./pages/HomePage"
-import PostListPage from "./pages/PostListPage"
-import CreatePostPage from "./pages/CreatePostPage"
+import ProjectListPage from "./pages/ProjectListPage"
+import CreateProjectPage from "./pages/CreateProjectPage"
 
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={ <HomePage />} />
-        <Route path="/posts" element={ <PostListPage />} />
-        <Route path="/posts/create" element={<CreatePostPage />} />
+        <Route path="/projects" element={ <ProjectListPage />} />
+        <Route path="/projects/create" element={<CreateProjectPage />} />
       </Routes>
     </>
   )

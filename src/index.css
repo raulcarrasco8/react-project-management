@@ -61,9 +61,9 @@ textarea {
   margin-left: 5px;
 }
 
-.EditPostPage,
-.CreatePostPage,
-.AddPost {
+.EditProjectPage,
+.CreateProjectPage,
+.AddProject {
   background: #f9eec3;
   border: 1px solid grey;
   box-shadow: 0px 2px 3px grey;
@@ -75,20 +75,20 @@ textarea {
   border-radius: 4px;
 }
 
-.EditPostPage {
+.EditProjectPage {
   background-color: rgb(239, 196, 88);
 }
 
-.EditPostPage form,
-.AddPost form,
-.CreatePostPage form {
+.EditProjectPage form,
+.AddProject form,
+.CreateProjectPage form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.AddPost button,
-.CreatePostPage button {
+.AddProject button,
+.CreateProjectPage button {
   display: block;
 }
 

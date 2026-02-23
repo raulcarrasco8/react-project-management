@@ -4,33 +4,33 @@ import { BASE_URL } from "../config/api";
 import { useNavigate } from "react-router-dom";
 
 
-function CreatePostPage() {
+function CreateProjectPage() {
 
     const [title, setTitle] = useState("")
-    const [body, setBody] = useState("")
+    const [description, setDescription] = useState("")
 
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        const newPost = {
+        const newProject = {
             title: title,
-            body: body
+            description: description
         }
 
-        axios.post(`${BASE_URL}/posts`, newPost)
+        axios.post(`${BASE_URL}/projects`, newProject)
             .then(() => {
-                console.log('succes, the post was created...')
-                navigate("/posts")
+                console.log('succes, the project was created...')
+                navigate("/projects")
             })
-            .catch(e => console.log("Error creating a new post...", e))
+            .catch(e => console.log("Error creating a new project...", e))
     
     }
 
     return(
-       <div className="CreatePostPage">
-            <h3>Add Post</h3>
+       <div className="CreateProjectPage">
+            <h3>Add Project</h3>
 
             <form onSubmit={handleSubmit}>
 
@@ -45,16 +45,17 @@ function CreatePostPage() {
                         onChange={(e) => {setTitle(e.target.value) }}
                     />
                 </label>
-
+                
                 <label>
-                    Body:
+                    Description:
                     <input 
                         type="text" 
                         name="description" 
                         placeholder="Enter the description" 
-                        value={body}
-                        onChange={(e) => {setBody(e.target.value) }}
+                        value={description}
+                        onChange={(e) => {setDescription(e.target.value) }}
                     />
+
                 </label>
 
                 <button>Create</button>
@@ -68,4 +69,4 @@ function CreatePostPage() {
 
 
 
-export default CreatePostPage;
+export default CreateProjectPage;
