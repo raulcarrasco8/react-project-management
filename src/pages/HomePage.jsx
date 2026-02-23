@@ -2,7 +2,7 @@
 function HomePage() {
     return(
         <div>
-            <h1>This is Home Page</h1>
+            <h1>React Project Management</h1>
         </div>
     );
 }
