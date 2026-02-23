@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
 import { BASE_URL } from "../config/api";
-
+import { Link } from "react-router-dom";
 
 
 function ProjectListPage() {
@@ -10,7 +10,8 @@ function ProjectListPage() {
     const[projects, setProjects] = useState(null)
 
     useEffect(() => {
-        axios.get(BASE_URL + "/projects")
+        axios
+        .get(BASE_URL + "/projects")
             .then(response => {
                 const projectsArr = response.data.toReversed()
                 setProjects(projectsArr);
@@ -34,6 +35,11 @@ function ProjectListPage() {
                     <div className="card" key={projectObj.id}>
                         <h3>{projectObj.title}</h3>
                         <p>{projectObj.description}</p>
+
+                        <Link to={`/projects/${projectObj.id}`}>
+                            <button>More details</button>
+                        </Link>
+                        
                     </div>
                 )
             })}
